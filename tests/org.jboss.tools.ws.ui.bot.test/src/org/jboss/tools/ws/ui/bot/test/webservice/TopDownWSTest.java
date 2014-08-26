@@ -22,7 +22,7 @@ import org.jboss.reddeer.swt.impl.button.PushButton;
 import org.jboss.reddeer.swt.impl.shell.DefaultShell;
 import org.jboss.reddeer.swt.wait.WaitUntil;
 import org.jboss.reddeer.swt.wait.WaitWhile;
-import org.jboss.tools.ws.ui.bot.test.uiutils.wizards.WsWizardBase.Slider_Level;
+import org.jboss.tools.ws.reddeer.ui.wizards.wst.WebServiceWizardPageBase.SliderLevel;
 import org.junit.Test;
 
 /**
@@ -67,13 +67,13 @@ public class TopDownWSTest extends WebServiceTestBase {
 		 */
 	@Test
 	public void testDevelopService() {
-		setLevel(Slider_Level.DEVELOP);
+		setLevel(SliderLevel.DEVELOP);
 		topDownWS();
 	}
 	
 	@Test
 	public void testAssembleService() {
-		setLevel(Slider_Level.ASSEMBLE);
+		setLevel(SliderLevel.ASSEMBLE);
 		topDownWS();
 	}
 	
@@ -84,13 +84,13 @@ public class TopDownWSTest extends WebServiceTestBase {
 	 */
 	@Test
 	public void testDeployService() {
-		setLevel(Slider_Level.DEPLOY);
+		setLevel(SliderLevel.DEPLOY);
 		topDownWS();
 	}
 	
 	@Test
 	public void testInstallService() {
-		setLevel(Slider_Level.INSTALL);
+		setLevel(SliderLevel.INSTALL);
 		topDownWS();
 	}
 	
@@ -100,7 +100,7 @@ public class TopDownWSTest extends WebServiceTestBase {
 	 */
 	@Test
 	public void testStartService() {
-		setLevel(Slider_Level.START);
+		setLevel(SliderLevel.START);
 		topDownWS();
 	}
 	
@@ -110,13 +110,13 @@ public class TopDownWSTest extends WebServiceTestBase {
 	 */
 	@Test
 	public void testTestService() {
-		setLevel(Slider_Level.TEST);
+		setLevel(SliderLevel.TEST);
 		topDownWS();
 	}
 	
 	@Test
 	public void testDefaultPkg() {
-		setLevel(Slider_Level.ASSEMBLE);
+		setLevel(SliderLevel.ASSEMBLE);
 		
 		/* There exists WSDL file created in testAssembleService due to using the same Slider_Level */
 		removeWsdlFileFromProject(getWsName() + ".wsdl");
